@@ -8,9 +8,5 @@ public class EmailRequest {
     private String emailContent;
     private String tone;
 
-    public CharSequence getTone() {
-    }
 
-    public char[] getEmailContent() {
-    }
 }
