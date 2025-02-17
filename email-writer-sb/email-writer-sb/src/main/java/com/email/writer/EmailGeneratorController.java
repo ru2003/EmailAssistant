@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class EmailGeneratorController {
 
 
-    private  EmailGeneratorService emailGeneratorService;
+    private final EmailGeneratorService emailGeneratorService;
 
     @PostMapping("/generate")
     public ResponseEntity<String> generateEmail(@RequestBody EmailRequest emailRequest){
@@ -25,3 +25,4 @@ public class EmailGeneratorController {
 
 
 }
+
