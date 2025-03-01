@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import './App.css'
 import { Container, Typography, Box, TextField ,
-  FormControl, InputLabel, Select, MenuItem 
+  FormControl, InputLabel, Select, MenuItem  , Button, CircularProgress
  } from '@mui/material';
 
 
@@ -11,6 +11,12 @@ function App() {
   const [ generatedReply , setGeneratedReply] = useState('');
   const [loading, setloading] = useState(false);
   const [error, setError] = useState(''); 
+
+
+
+  const handleSubmit = async () =>{
+
+  };
 
   return (
       
@@ -44,6 +50,13 @@ function App() {
           </Select>
         </FormControl>
         
+        <Button
+            variant = 'contained'
+            onClick={handleSubmit}
+            disabled={!emailContent || loading}
+            fullWidth>
+          {loading ? <CicularProgress size={24}/> : "Generate Reply"}
+        </Button>
       </Box>
     </Container>
 
