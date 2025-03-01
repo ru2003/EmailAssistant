@@ -1,6 +1,8 @@
 import {useState} from 'react'
 import './App.css'
-import { Container, Typography, Box, TextField } from '@mui/material';
+import { Container, Typography, Box, TextField ,
+  FormControl, InputLabel, Select, MenuItem 
+ } from '@mui/material';
 
 
 function App() {
@@ -26,9 +28,21 @@ function App() {
         label="Original Email Content"
         value={emailContent || ''}
         onChange={(e) => setEmailContent(e.target.value)}
-        
+        sx={{mb:2}}
         />
-
+        
+        <FormControl fullWidth sx={{mb : 2}}>
+          <InputLabel>Tone(Optional)</InputLabel>
+          <Select 
+          value={tone || ''}
+          label={"Tone(Optional)"}
+          onChange={(e) => setTone(e.target.value)}>
+            <MenuItem value="">None</MenuItem>
+            <MenuItem value="professional">professional</MenuItem>
+            <MenuItem value="casual">Casual</MenuItem>
+            <MenuItem value="friendly">Friendly</MenuItem>
+          </Select>
+        </FormControl>
         
       </Box>
     </Container>
