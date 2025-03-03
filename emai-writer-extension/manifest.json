@@ -3,6 +3,7 @@
     "description": "AI-Powered email reply generator",
     "version": "1.0",
     "manifest_version": 3,
+    "permissions" : ["activeTab" , "storage"],
     "action": {
     "default_title": "Email Writer Asistant"
     
